@@ -1,35 +1,30 @@
 package br.com.fiscaltech.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
 @Table(name="cad_cor")
-public class Cor {
+public class Cor implements Serializable {
+
+	private static final long serialVersionUID = -1479808222790201274L;
 
 	@Id
-	@Column(name="id_cor")
-	private Integer idcor;
+	@NotNull
+	@Column(name="id")
+	private Long id;
+	
 	@Column(name="descricao")
 	private String descricao;
 	
-	public Integer getIdcor() {
-		return idcor;
-	}
-	
-	public void setId_cor(Integer idcor) {
-		this.idcor = idcor;
-	}
-	
-	public String getDescricao() {
-		return descricao;
-	}
-	
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
-
-
 }

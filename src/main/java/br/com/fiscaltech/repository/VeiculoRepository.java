@@ -6,6 +6,4 @@ import br.com.fiscaltech.model.Veiculo;
 
 public interface VeiculoRepository extends JpaRepository<Veiculo, String> {
 
-    Veiculo findByPlaca(String placa);
-	
 }

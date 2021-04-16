@@ -4,8 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import br.com.fiscaltech.model.Cor;
 
-public interface CorRepository extends JpaRepository<Cor, Integer> {
+public interface CorRepository extends JpaRepository<Cor, Long> {
 
-	Cor findByIdcor(Integer idCor);
-    
 }
